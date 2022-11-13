@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (max-width: 910px) {
+    .App {
+        text-align: center;
+        padding: 50px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 330px) {
+    .App {
+        text-align: center;
+        padding: 10px;
+        width: 80%;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cardListContainer {
+    width: 100%;
+}
+
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    align-self: center;
+    min-width: 330px;
+    max-width: 380px;
+    min-height: 100px;
+    flex-shrink: 0;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-left {
+    min-width: 55%;
+    height: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.card-left > h2 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.card-right {
+    flex-shrink: 1;
+    height: 100%;
+}
+
+.img-container img {
+    width: 100px;
+}
+
+.filter {
+    margin: 20px 0;
 }
