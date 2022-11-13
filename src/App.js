@@ -89,7 +89,7 @@ export default function App() {
           ))}
         </div>
       </div>
-      <pre>{JSON.stringify(filteredOptions, null, 2)}</pre>
+      {/*<pre>{JSON.stringify(filteredOptions, null, 2)}</pre>*/}
     </div>
   );
 }
